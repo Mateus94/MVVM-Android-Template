@@ -9,7 +9,7 @@ To use this template your DataBinding needs to be enabled in gradle, and `minSdk
 ** Add template ** 
 
   -  clone this repository.
-  -  extract the file MvvmWithInterfaceTemplate in {ANDROID_STUDIO_LOCATION}/plugins/android/lib/templates/activities/
+  -  copy the folder MVVMActivityTemplate in {ANDROID_STUDIO_LOCATION}/plugins/android/lib/templates/activities/
 
 ## Usage
 

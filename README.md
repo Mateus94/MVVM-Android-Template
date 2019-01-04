@@ -1,4 +1,4 @@
-# MVMM Android Template
+# MVVM Android Template
 
 An activity template that implements the mvvm pattern. Create an activity with a viewModel and a communication interface between activivty and view model.
 

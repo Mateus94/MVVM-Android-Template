@@ -10,7 +10,9 @@ To use this template your DataBinding needs to be enabled in gradle, and `minSdk
 
   -  clone this repository.
   -  copy the folder MVVMActivityTemplate in {ANDROID_STUDIO_LOCATION}/plugins/android/lib/templates/activities/
+-  copy the folder MVVMFragmentTemplate in {ANDROID_STUDIO_LOCATION}/plugins/android/lib/templates/other/
 
 ## Usage
 
 in AndroidStudio, File > New > Activity > MVVM Template Activity
+in AndroidStudio, File > New > Fragment > MVVM Template Fragment

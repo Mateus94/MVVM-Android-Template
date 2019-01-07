@@ -11,18 +11,22 @@ public class ${keyName} extends BaseKey {
         return new ${keyName}();
     }
 
+    @Override
     public int navigationViewId() {
         throw new NotImplementedException("Not implemented Yet!");
     }
 
+    @Override
     public int title() {
         throw new NotImplementedException("Not implemented Yet!");
     }
 
+    @Override
     public Fragment createFragment() {
         return ${className}.create();
     }
 
+    @Override
     public boolean shouldShowUp() {
         return true;
     }

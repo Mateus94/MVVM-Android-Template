@@ -17,15 +17,11 @@ class ${keyName} : BaseKey() {
     override fun createFragment() : Fragment = ${className}.create()
 
     override fun navigationViewId() : Int {
-        if(true)
-            throw IllegalStateException("${keyName} está faltando passar um parametro")
-        return 0
+        throw new NotImplementedException("Not implemented Yet!");
     }
 
     override fun title() : Int { 
-        if(true)
-            throw IllegalStateException("${keyName} está faltando passar um parametro")
-        return 0
+        throw new NotImplementedException("Not implemented Yet!");
     }
 
     override fun shouldShowUp() : Boolean = true

@@ -17,11 +17,11 @@ class ${keyName} : BaseKey() {
     override fun createFragment() : Fragment = ${className}.create()
 
     override fun navigationViewId() : Int {
-        throw new NotImplementedException("Not implemented Yet!");
+        throw new NotImplementedException("Not implemented Yet!")
     }
 
     override fun title() : Int { 
-        throw new NotImplementedException("Not implemented Yet!");
+        throw new NotImplementedException("Not implemented Yet!")
     }
 
     override fun shouldShowUp() : Boolean = true

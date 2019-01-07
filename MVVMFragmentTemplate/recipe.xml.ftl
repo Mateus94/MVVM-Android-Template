@@ -32,18 +32,25 @@
     </#if>
 </#if>
 
+
 <#if generateClassKey>
-    <instantiate from="root/src/app_package/SimpleFragmentKey.kt.ftl"
-                    to="${escapeXmlAttribute(srcOut)}/key/${keyName}.kt" />
+    <#if generateKotlin>
+        <instantiate from="root/src/app_package/SimpleFragmentKey.kt.ftl"
+                        to="${escapeXmlAttribute(srcOut)}/key/${keyName}.kt" />
         <open file="${escapeXmlAttribute(srcOut)}/key/${keyName}.kt" />
+    <#else>
+        <instantiate from="root/src/app_package/SimpleFragmentKey.java.ftl"
+                        to="${escapeXmlAttribute(srcOut)}/key/${keyName}.java" />
+        <open file="${escapeXmlAttribute(srcOut)}/key/${keyName}.kt" />
+    </#if>
 </#if>
 
 <#if generateKotlin>
     <instantiate from="root/src/app_package/SimpleFragmentViewModel.kt.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/viewmodel/${className}ViewModel.kt" />
+                   to="${escapeXmlAttribute(srcOut)}/viewmodel/${featureName}ViewModel.kt" />
 <#else>
    <instantiate from="root/src/app_package/SimpleFragmentViewModel.java.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/viewmodel/${className}ViewModel.java" />
+                   to="${escapeXmlAttribute(srcOut)}/viewmodel/${featureName}ViewModel.java" />
 </#if>
 
 </recipe>

@@ -11,26 +11,18 @@ public class ${keyName} extends BaseKey {
         return new ${keyName}();
     }
 
-    @Override
     public int navigationViewId() {
-        if(true)
-            throw new IllegalStateException("${keyName} está faltando passar um parametro");
-        return 0;
+        throw new NotImplementedException("Not implemented Yet!");
     }
 
-    @Override
-    public int title() { 
-        if(true)
-            throw new IllegalStateException("${keyName} está faltando passar um parametro");
-        return 0;
+    public int title() {
+        throw new NotImplementedException("Not implemented Yet!");
     }
 
-    @Override
     public Fragment createFragment() {
         return ${className}.create();
     }
 
-    @Override
     public boolean shouldShowUp() {
         return true;
     }

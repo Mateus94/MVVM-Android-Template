@@ -1,10 +1,10 @@
 package ${packageName}.viewmodel;
 
-public class ${className}ViewModel extends BaseViewModel {
+public class ${featureName}ViewModel extends BaseViewModel {
 
 <#if generateInterfaceNavigator>
 ${navigatorName} navigator;
-public ${className}ViewModel(${navigatorName} navigator){
+public ${featureName}ViewModel(${navigatorName} navigator){
 	this.navigator = navigator;
 }
 </#if>

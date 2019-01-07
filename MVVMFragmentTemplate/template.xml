@@ -1,81 +1,90 @@
 <?xml version="1.0"?>
 <template
-    format="5"
-    revision="3"
-    name="MVVM Template Fragment"
-    minApi="9"
-    minBuildApi="14"
-    description="Creates a new empty Fragment with ViewModel">
+        format="5"
+        revision="3"
+        name="MVVM Template Fragment"
+        minApi="9"
+        minBuildApi="14"
+        description="Creates a new empty Fragment with ViewModel">
 
-    <category value="Fragment" />
+    <category value="Fragment"/>
 
-    <dependency name="android-support-v4" revision="8" />
-
-    <parameter
-        id="className"
-        name="Fragment Name"
-        type="string"
-        constraints="class|nonempty|unique"
-        default="BlankFragment"
-        help="The name of the fragment class to create" />
+    <dependency name="android-support-v4" revision="8"/>
 
     <parameter
-        id="generateLayout"
-        name="Generate Layout File"
-        type="boolean"
-        default="true"
-        help="If true, a layout file will be generated" />
+            id="featureName"
+            name="Feature Name"
+            type="string"
+            constraints="nonempty|unique"
+            default="FeatureName"
+            help="The name of the feature to create"/>
 
     <parameter
-        id="layoutName"
-        name="Layout Name"
-        type="string"
-        constraints="layout|unique|nonempty"
-        suggest="fragment_${classToResource(className)}"
-        default="fragment_blank"
-        visibility="generateLayout"
-        help="The name of the layout to create for the activity" />
+            id="className"
+            name="Fragment Name"
+            type="string"
+            constraints="class|nonempty|unique"
+            suggest="${featureName}Fragment"
+            default="BlankFragment"
+            help="The name of the fragment class to create"/>
 
     <parameter
-        id="generateClassKey"
-        name="Generate Class Key File"
-        type="boolean"
-        default="false"
-        help="If true, a key class will be generated" />
+            id="generateLayout"
+            name="Generate Layout File"
+            type="boolean"
+            default="true"
+            help="If true, a layout file will be generated"/>
 
     <parameter
-        id="keyName"
-        name="Key class name"
-        type="string"
-        constraints="unique|nonempty"
-        suggest="${className}Key"
-        default="${className}Key"
-        visibility="generateClassKey"
-        help="The name of the key" />
-
-   <parameter
-        id="generateInterfaceNavigator"
-        name="Generate Interface Navigator File"
-        type="boolean"
-        default="false"
-        help="If true, a navigator class will be generated" />
+            id="layoutName"
+            name="Layout Name"
+            type="string"
+            constraints="layout|unique|nonempty"
+            suggest="fragment_${classToResource(featureName)}"
+            default="fragment_blank"
+            visibility="generateLayout"
+            help="The name of the layout to create for the activity"/>
 
     <parameter
-        id="navigatorName"
-        name="Navigator class name"
-        type="string"
-        constraints="unique|nonempty"
-        suggest="${className}Navigator"
-        default="${layoutName}Navigator"
-        visibility="generateInterfaceNavigator"
-        help="The name of the navigator to communication viewModel with Activity the activity" />
+            id="generateClassKey"
+            name="Generate Class Key File"
+            type="boolean"
+            default="false"
+            help="If true, a key class will be generated"/>
 
     <parameter
-        id="backwardsCompatibility"
-        name="Backwards Compatibility (AppCompat)"
-        type="boolean"
-        default="true"
-        help="If false, this activity base class will be Activity instead of AppCompatActivity" />
+            id="keyName"
+            name="Key class name"
+            type="string"
+            constraints="unique|nonempty"
+            suggest="${featureName}Key"
+            default="${featureName}Key"
+            visibility="generateClassKey"
+            help="The name of the key"/>
+
+    <parameter
+            id="generateInterfaceNavigator"
+            name="Generate Interface Navigator File"
+            type="boolean"
+            default="false"
+            help="If true, a navigator class will be generated"/>
+
+    <parameter
+            id="navigatorName"
+            name="Navigator class name"
+            type="string"
+            constraints="unique|nonempty"
+            suggest="${featureName}Navigator"
+            default="${layoutName}Navigator"
+            visibility="generateInterfaceNavigator"
+            help="The name of the navigator to communication viewModel with Activity the activity"/>
+
+    <parameter
+            id="backwardsCompatibility"
+            name="Backwards Compatibility (AppCompat)"
+            type="boolean"
+            default="true"
+            help="If false, this activity base class will be Activity instead of AppCompatActivity"/>
 
     <!-- 128x128 thumbnails relative to template.xml -->
     <thumbs>
@@ -83,7 +92,7 @@
         <thumb>template_blank_activity.png</thumb>
     </thumbs>
 
-    <globals file="globals.xml.ftl" />
-    <execute file="recipe.xml.ftl" />
+    <globals file="globals.xml.ftl"/>
+    <execute file="recipe.xml.ftl"/>
 
 </template>

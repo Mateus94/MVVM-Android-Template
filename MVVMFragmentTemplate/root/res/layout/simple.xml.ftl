@@ -4,7 +4,7 @@
     <data>
         <variable
             name="viewModel"
-            type="${packageName}.viewmodel.${className}ViewModel"/>
+            type="${packageName}.viewmodel.${featureName}ViewModel"/>
     </data>
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"

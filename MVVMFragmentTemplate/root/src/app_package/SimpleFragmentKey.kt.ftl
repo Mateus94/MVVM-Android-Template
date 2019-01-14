@@ -1,6 +1,6 @@
 package ${packageName}.key
 
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import ${packageName}.fragment.${className}
 import org.parceler.Parcel
 

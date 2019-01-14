@@ -2,7 +2,8 @@ package ${packageName}.key
 
 import androidx.fragment.app.Fragment
 import ${packageName}.fragment.${className}
-import org.parceler.Parcel
+import org.parceler.
+import org.apache.commons.lang3.NotImplementedException
 
 @Parcel(Parcel.Serialization.FIELD)
 class ${keyName} : BaseKey() {
@@ -17,11 +18,11 @@ class ${keyName} : BaseKey() {
     override fun createFragment() : Fragment = ${className}.create()
 
     override fun navigationViewId() : Int {
-        throw new NotImplementedException("Not implemented Yet!")
+        throw NotImplementedException("Not implemented Yet!")
     }
 
     override fun title() : Int { 
-        throw new NotImplementedException("Not implemented Yet!")
+        throw NotImplementedException("Not implemented Yet!")
     }
 
     override fun shouldShowUp() : Boolean = true

@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import ${packageName}.viewmodel.${className}ViewModel
+import ${packageName}.viewmodel.${featureName}ViewModel
 <#if generateInterfaceNavigator>
 import ${packageName}.viewmodel.${navigatorName}
 </#if>
@@ -12,7 +12,7 @@ import ${packageName}.viewmodel.${navigatorName}
 import kotlinx.android.synthetic.main.${layoutName}.*
 </#if>
 
-class ${className} : BaseFragment<${underscoreToCamelCase(layoutName)}Binding, ${className}ViewModel>()<#if generateInterfaceNavigator>, ${navigatorName}</#if> {
+class ${className} : BaseFragment<${underscoreToCamelCase(layoutName)}Binding, ${featureName}ViewModel>()<#if generateInterfaceNavigator>, ${navigatorName}</#if> {
     
     companion object {
         @JvmStatic
@@ -25,7 +25,7 @@ class ${className} : BaseFragment<${underscoreToCamelCase(layoutName)}Binding, $
         mBinding = ${underscoreToCamelCase(layoutName)}Binding.inflate(inflater, container, false)
 
         if (mViewModel == null) {
-            mViewModel = ${className}ViewModel(<#if generateInterfaceNavigator>this</#if>)
+            mViewModel = ${featureName}ViewModel(<#if generateInterfaceNavigator>this</#if>)
         }
 
         mBinding.viewModel = mViewModel

@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import br.com.intermedium.BaseFragment;
-import ${packageName}.viewmodel.${className}ViewModel;
+import ${packageName}.viewmodel.${featureName}ViewModel;
 <#if generateInterfaceNavigator>
 import ${packageName}.viewmodel.${navigatorName};
 </#if>
@@ -16,7 +16,7 @@ import ${packageName}.viewmodel.${navigatorName};
 import android.widget.TextView;
 </#if>
 
-public class ${className} extends BaseFragment<${underscoreToCamelCase(layoutName)}Binding, ${className}ViewModel> <#if generateInterfaceNavigator!true> implements ${navigatorName}</#if>{
+public class ${className} extends BaseFragment<${underscoreToCamelCase(layoutName)}Binding, ${featureName}ViewModel> <#if generateInterfaceNavigator!true> implements ${navigatorName}</#if>{
     
     public static ${className} create() {
         return new ${className}();
@@ -29,9 +29,9 @@ public class ${className} extends BaseFragment<${underscoreToCamelCase(layoutNam
     </#if>
 if (mViewModel == null)
 <#if generateInterfaceNavigator>
-           mViewModel = new ${className}ViewModel(${className}.this);
+           mViewModel = new ${featureName}ViewModel(${className}.this);
 <#else>
-           mViewModel = new ${className}ViewModel();
+           mViewModel = new ${featureName}ViewModel();
 </#if>
 
        mBinding.setViewModel(mViewModel);

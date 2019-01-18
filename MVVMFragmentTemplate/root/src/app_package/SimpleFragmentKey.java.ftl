@@ -13,12 +13,12 @@ public class ${keyName} extends BaseKey {
 
     @Override
     public int navigationViewId() {
-        throw new NotImplementedException("Not implemented Yet!");
+        return 0;
     }
 
     @Override
     public int title() {
-        throw new NotImplementedException("Not implemented Yet!");
+        return 0;
     }
 
     @Override

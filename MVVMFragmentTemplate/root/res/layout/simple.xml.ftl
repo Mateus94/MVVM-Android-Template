@@ -6,7 +6,7 @@
             name="viewModel"
             type="${packageName}.viewmodel.${featureName}ViewModel"/>
     </data>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -23,5 +23,5 @@
         tools:text="https://github.com/Mateus94/MVVM-Android-Template" />
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

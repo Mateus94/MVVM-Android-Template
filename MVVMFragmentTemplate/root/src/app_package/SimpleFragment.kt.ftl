@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import br.com.intermedium.base.BaseFragment
+import br.com.intermedium.databinding.Fragment${featureName}Binding
 import ${packageName}.viewmodel.${featureName}ViewModel
 <#if generateInterfaceNavigator>
 import ${packageName}.viewmodel.${navigatorName}
